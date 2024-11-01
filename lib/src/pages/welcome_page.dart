@@ -1,12 +1,20 @@
 import 'dart:ui';
 
+import 'package:delivery_app/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.light.copyWith(
+        statusBarColor: Colors.white
+      )
+    );
+
     return Scaffold(
       body: Stack(
         children: [
@@ -48,7 +56,10 @@ class WelcomePage extends StatelessWidget {
                 height: 45.0,
                 child: ElevatedButton(
                     onPressed: () {
-
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context) =>
+                          const LoginPage())
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,
@@ -57,32 +68,39 @@ class WelcomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20.0)
                       )
                     ),
-                    child: Text('Login')
+                    child: const Text('Login')
                 ),
               ),
               Container(
                 width: 350.0,
                 height: 45.0,
+                margin: const EdgeInsets.only(top: 30.0),
                 child: ElevatedButton(
                     onPressed: () {
 
                     },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.orange,
+                        backgroundColor: Colors.blueAccent,
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0)
                         )
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/facebook.png'),
+                          width: 20.0,
+                          height: 20.0,
                         ),
-                        Text('Connect with facebook', style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15.0
-                        ))
+                        Container(
+                          margin: const EdgeInsets.only(left: 10.0),
+                          child: const Text('Connect with facebook', style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15.0
+                          ))
+                        ),
                       ],
                     )
                 ),
