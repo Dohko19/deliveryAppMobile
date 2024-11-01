@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:delivery_app/src/colors/colors.dart';
 import 'package:delivery_app/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -54,6 +55,7 @@ class WelcomePage extends StatelessWidget {
               Container(
                 width: 350.0,
                 height: 45.0,
+                margin: const EdgeInsets.only(top: 40.0),
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(
@@ -68,7 +70,10 @@ class WelcomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20.0)
                       )
                     ),
-                    child: const Text('Login')
+                    child: const Text('Login', style: TextStyle(
+                      color: white,
+                      fontSize: 15.0
+                    ))
                 ),
               ),
               Container(
