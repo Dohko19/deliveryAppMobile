@@ -1,4 +1,8 @@
 import 'package:delivery_app/src/colors/colors.dart';
+import 'package:delivery_app/src/pages/forgot_password.dart';
+import 'package:delivery_app/src/pages/sign_up_page.dart';
+import 'package:delivery_app/src/pages/welcome_page.dart';
+import 'package:delivery_app/src/tabs/tabs_page.dart';
 import 'package:delivery_app/src/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 
@@ -63,11 +67,19 @@ class LoginPage extends StatelessWidget {
                       _buttonLogin(context),
                       Container(
                         margin: const EdgeInsets.only(top: 30.0),
-                        child: const Text('Forgot your password?', style: TextStyle(
-                          color: black,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15.0
-                        )),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (context) =>
+                                const ForgotPassword())
+                            );
+                          },
+                          child: Text('Forgot your password?', style: TextStyle(
+                            color: black,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15.0
+                          )),
+                        ),
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 30.0),
@@ -81,11 +93,19 @@ class LoginPage extends StatelessWidget {
                             )),
                             Container(
                               margin: EdgeInsets.symmetric(horizontal: 10.0),
-                              child: const Text('Sign up', style: TextStyle(
-                                  color: orange,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 15.0
-                              )),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) =>
+                                      SignUpPage())
+                                  );
+                                },
+                                child: Text('Sign up', style: TextStyle(
+                                    color: orange,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 15.0
+                                )),
+                              ),
                             ),
                           ],
                         ),
@@ -151,7 +171,7 @@ Widget _buttonLogin(BuildContext context){
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(
               builder: (context) =>
-              const LoginPage())
+              const TabsPage())
           );
         },
         style: ElevatedButton.styleFrom(
