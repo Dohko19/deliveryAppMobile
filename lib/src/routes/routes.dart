@@ -1,8 +1,8 @@
-import 'package:delivery_app/src/pages/forgot_password.dart';
-import 'package:delivery_app/src/pages/login_page.dart';
-import 'package:delivery_app/src/pages/sign_up_page.dart';
-import 'package:delivery_app/src/pages/welcome_page.dart';
-import 'package:delivery_app/src/tabs/tabs_page.dart';
+import 'package:delivery_app/src/features/presentation/forgot_password_page/View/forgot_password.dart';
+import 'package:delivery_app/src/features/presentation/login_page/View/login_page.dart';
+import 'package:delivery_app/src/features/presentation/sign_up_page/View/sign_up_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/tabs_page.dart';
+import 'package:delivery_app/src/features/presentation/welcome_page/View/welcome_page.dart';
 import 'package:flutter/cupertino.dart';
 
 final routes = <String, WidgetBuilder> {

@@ -1,9 +1,9 @@
 import 'package:delivery_app/src/colors/colors.dart';
-import 'package:delivery_app/src/pages/forgot_password.dart';
-import 'package:delivery_app/src/pages/sign_up_page.dart';
-import 'package:delivery_app/src/pages/welcome_page.dart';
-import 'package:delivery_app/src/tabs/tabs_page.dart';
-import 'package:delivery_app/src/widgets/back_button.dart';
+import 'package:delivery_app/src/features/presentation/forgot_password_page/View/forgot_password.dart';
+import 'package:delivery_app/src/features/presentation/sign_up_page/View/sign_up_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/tabs_page.dart';
+import 'package:delivery_app/src/features/presentation/commons_widgets/back_button.dart';
+
 import 'package:flutter/material.dart';
 
 //UI

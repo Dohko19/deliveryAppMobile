@@ -1,10 +1,10 @@
+import 'package:delivery_app/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/favourite_tab/View/favourite_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 import 'package:flutter/material.dart';
 //tabs
 import 'package:delivery_app/src/colors/colors.dart';
-import 'package:delivery_app/src/tabs/explore_tab.dart';
-import 'package:delivery_app/src/tabs/favourite_tab.dart';
-import 'package:delivery_app/src/tabs/my_order_tab.dart';
-import 'package:delivery_app/src/tabs/profile_tab.dart';
 
 class TabsPage extends StatefulWidget {
   const TabsPage({super.key});
