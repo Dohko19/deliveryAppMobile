@@ -74,7 +74,7 @@ class LoginPage extends StatelessWidget {
                                 const ForgotPassword())
                             );
                           },
-                          child: Text('Forgot your password?', style: TextStyle(
+                          child: const Text('Forgot your password?', style: TextStyle(
                             color: black,
                             fontWeight: FontWeight.w400,
                             fontSize: 15.0
@@ -100,7 +100,7 @@ class LoginPage extends StatelessWidget {
                                       SignUpPage())
                                   );
                                 },
-                                child: Text('Sign up', style: TextStyle(
+                                child: const Text('Sign up', style: TextStyle(
                                     color: orange,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 15.0
