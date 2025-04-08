@@ -1,6 +1,7 @@
 import 'package:delivery_app/src/colors/colors.dart';
+import 'package:delivery_app/src/features/presentation/commons_widgets/alert_dialog.dart';
+import 'package:delivery_app/src/features/presentation/commons_widgets/done_button.dart';
 import 'package:delivery_app/src/features/presentation/commons_widgets/header_text.dart';
-import 'package:delivery_app/src/features/presentation/login_page/View/login_page.dart';
 import 'package:delivery_app/src/features/presentation/commons_widgets/back_button.dart';
 import 'package:flutter/material.dart';
 
@@ -97,75 +98,19 @@ Widget _sendButton( BuildContext context){
 }
 
 void _showAlert( BuildContext context ){
-  showDialog(
-      context: context,
-      barrierDismissible: true,
-      builder: ( BuildContext context ){
-        return AlertDialog(
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.0))
-          ),
-          content: Container(
-            height: 350,
-            child: Column(
-              children: [
-                const Image(
-                  image:AssetImage('assets/lock.png'),
-                  width: 130.0,
-                  height: 130.0,
-                ),
-                Container(
-                  margin: EdgeInsets.all(15.0),
-                  child: headerText('Your password has been reset', black, 20.0, FontWeight.bold),
-                ),
-                Container(
-                  margin: EdgeInsets.all(15.00),
-                  child: Text("You'll shortly receive an email with a code to setup a new password",
-                  style: TextStyle(
-                    color: black,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 15.0
-                  ),
-                  ),
-                ),
-                _doneButton(context)
-              ],
-            ),
-          ),
-
-        );
-      }
+  showAlertDialog(
+      context,
+      const AssetImage('assets/lock.png'),
+      'Your password has been reset',
+      "You'll shortly receive an email with a code to setup a new password",
+      "Done",
+      doneButton(context, "Done")
   );
 }
 
-Widget _doneButton( BuildContext context ){
-  return Container(
-    width: 350.0,
-    height: 45,
-    child: ElevatedButton(
-      onPressed: (){
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) => const LoginPage())
-        );
-      },
-      style: ElevatedButton.styleFrom(
-          backgroundColor: orange,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0)
-          )
-      ),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Done',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 15.0,
-              color: Colors.white
-            ),
-          )
-        ],
-      ),
-    ),
-  );
-}
+// Navigator.push(context, MaterialPageRoute(
+//     builder: (context) => const LoginPage())
+// );
+
+
+
